@@ -11,10 +11,10 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "test": "npm run build && node --test test/auditor.test.mjs",
     "prepublishOnly": "npm test",
-    "start": "node dist/cli.js",
+    "start": "node init && node dist/cli.js",
     "audit": "npm run build && node dist/cli.js",
     "audit:suggest": "npm run build && node dist/cli.js . --suggest",
     "demo": "bash ../../scripts/before-after-demo.sh"

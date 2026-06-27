@@ -14,10 +14,10 @@
   ],
   "scripts": {
     "bundle": "node scripts/bundle-assets.mjs",
-    "build": "npm run bundle && tsc",
+    "build": "node init && npm run bundle && tsc",
     "test": "npm run build && node --test test/cli.test.mjs",
     "prepublishOnly": "npm test",
-    "start": "node dist/cli.js"
+    "start": "node init && node dist/cli.js"
   },
   "engines": {
     "node": ">=18"
